@@ -13,7 +13,7 @@ npm install until-done
 ## Usage/Examples
 
 ```typescript
-import waitFor from "wait-for";
+import untilDone from "until-done";
 
 async function fetchData() {
   let apiResponse = null;
@@ -22,7 +22,7 @@ async function fetchData() {
   setTimeout(() => {
     apiResponse = { data: "Sample response" };
   });
-  await waitUntil(() => apiResponse !== null);
+  await untilDone(() => apiResponse !== null);
   //check for the apiResponse Every 1s (by default)
   // API response is available, proceed with code execution
   console.log("API response:", apiResponse);
@@ -32,7 +32,7 @@ fetchData();
 ```
 
 ```typescript
-import waitFor from "your-package-name";
+import untilDone from "until-done";
 
 async function fetchData() {
   let apiResponse = null;
@@ -42,7 +42,7 @@ async function fetchData() {
     apiResponse = { data: "Sample response" };
   }, 3000);
 
-  await waitUntil(() => apiResponse !== null, 500);
+  await untilDone(() => apiResponse !== null, 500);
   //check for the apiResponse Every 500ms
   // API response is available, proceed with code execution
   console.log("API response:", apiResponse);
