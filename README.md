@@ -22,7 +22,7 @@ async function fetchData() {
   setTimeout(() => {
     apiResponse = { data: "Sample response" };
   });
-  await untilReady(() => apiResponse !== null);
+  await waitUntil(() => apiResponse !== null);
   //check for the apiResponse Every 1s (by default)
   // API response is available, proceed with code execution
   console.log("API response:", apiResponse);
@@ -42,7 +42,7 @@ async function fetchData() {
     apiResponse = { data: "Sample response" };
   }, 3000);
 
-  await untilReady(() => apiResponse !== null, 500);
+  await waitUntil(() => apiResponse !== null, 500);
   //check for the apiResponse Every 500ms
   // API response is available, proceed with code execution
   console.log("API response:", apiResponse);
