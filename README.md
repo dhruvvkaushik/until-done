@@ -1,4 +1,4 @@
-# wait-for
+# until-done
 
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/your-username/your-package-name/blob/main/LICENSE)
 
@@ -7,7 +7,7 @@
 ## Installation
 
 ```shell
-npm install your-package-name
+npm install until-done
 ```
 
 ## Usage/Examples
@@ -22,7 +22,7 @@ async function fetchData() {
   setTimeout(() => {
     apiResponse = { data: "Sample response" };
   });
-  await waitFor(() => apiResponse !== null);
+  await untilReady(() => apiResponse !== null);
   //check for the apiResponse Every 1s (by default)
   // API response is available, proceed with code execution
   console.log("API response:", apiResponse);
@@ -42,7 +42,7 @@ async function fetchData() {
     apiResponse = { data: "Sample response" };
   }, 3000);
 
-  await waitFor(() => apiResponse !== null, 500);
+  await untilReady(() => apiResponse !== null, 500);
   //check for the apiResponse Every 500ms
   // API response is available, proceed with code execution
   console.log("API response:", apiResponse);

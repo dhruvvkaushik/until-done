@@ -1,13 +1,17 @@
 {
-  "name": "wait-for",
-  "version": "1.0.0",
-  "description": "waits for a condition to be met before proceeding",
+  "name": "until-done",
+  "version": "1.0.1",
+  "description": "waits until condition is met then proceeds",
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dhruvvkaushik/until-done"
+  },
   "devDependencies": {
     "typescript": "^5.0.4"
   }
